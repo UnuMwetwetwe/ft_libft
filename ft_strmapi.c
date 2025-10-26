@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:52:31 by aldecour          #+#    #+#             */
-/*   Updated: 2025/10/24 21:25:01 by aldecour         ###   ########.fr       */
+/*   Updated: 2025/10/26 19:28:48 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*scpy;
+	char			*scpy;
 
 	i = 0;
 	scpy = ft_strdup(s);
