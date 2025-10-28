@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/28 19:59:19 by aldecour          #+#    #+#             */
+/*   Updated: 2025/10/28 21:07:45 by aldecour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -5,25 +16,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lstcpy;
 	t_list	*bby_lst;
-	t_list	*tmp;
+	void	*cont;
 
-	if (!lst)
-		return ;
-	lstcpy = ft_lstnew(((t_list *)f(lst))->content);
-	if (!lstcpy)
-		return NULL;
-	tmp = lst;
-	while (tmp)
+	if (!lst || !del || !f)
+		return (NULL);
+	lstcpy = NULL;
+	while (lst)
 	{
-		bby_lst = ft_lstnew(tmp->content);
-		if (bby_lst)
+		cont = f(lst->content);
+		bby_lst = ft_lstnew(cont);
+		if (!bby_lst)
 		{
-			f(bby_lst);
-			ft_lstadd_back(*lstcpy, bby_lst);
-			tmp = lst->next;
+			del(cont);
+			ft_lstclear(&lstcpy, del);
+			break ;
 		}
-		else
-			del(bby_lst);
+		ft_lstadd_back(&lstcpy, bby_lst);
+		lst = lst->next;
 	}
 	return (lstcpy);
 }
