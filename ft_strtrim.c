@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_prefix_trim(char const *s1, char const *set)
+static size_t	ft_prefix_trim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -34,7 +34,7 @@ size_t	ft_prefix_trim(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	ft_suffix_trim(char const *s1, char const *set, size_t len)
+static size_t	ft_suffix_trim(char const *s1, char const *set, size_t len)
 {
 	size_t	j;
 
