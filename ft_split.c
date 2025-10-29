@@ -71,6 +71,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	tab = ft_count_words(s, c);
 	if (!tab)
 		return (NULL);

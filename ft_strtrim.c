@@ -60,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	i = ft_prefix_trim(s1, set);
 	j = ft_suffix_trim(s1, set, ft_strlen(s1));

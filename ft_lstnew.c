@@ -16,6 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*bby_list;
 
+	if (!content)
+		return (NULL);
 	bby_list = malloc(sizeof(t_list));
 	if (!bby_list)
 		return (NULL);

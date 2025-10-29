@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*scpy;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	scpy = ft_strdup(s);
 	if (!scpy)
 		return (NULL);
