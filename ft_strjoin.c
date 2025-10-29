@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:36:52 by aldecour          #+#    #+#             */
-/*   Updated: 2025/10/22 17:29:45 by aldecour         ###   ########.fr       */
+/*   Updated: 2025/10/29 20:40:44 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s1len;
 	int		s2len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	scat = malloc(sizeof (char) *(s1len + s2len + 1));
