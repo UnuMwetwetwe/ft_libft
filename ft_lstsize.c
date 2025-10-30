@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 20:32:58 by aldecour          #+#    #+#             */
-/*   Updated: 2025/10/27 20:42:36 by aldecour         ###   ########.fr       */
+/*   Updated: 2025/10/30 22:29:42 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	if (!s)
+	if (!lst)
 		return (0);
 	while (lst)
 	{

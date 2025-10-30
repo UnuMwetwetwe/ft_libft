@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 19:22:00 by aldecour          #+#    #+#             */
-/*   Updated: 2025/10/26 19:26:02 by aldecour         ###   ########.fr       */
+/*   Updated: 2025/10/30 22:56:47 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*bby_list;
 
-	if (!content)
-		return (NULL);
 	bby_list = malloc(sizeof(t_list));
 	if (!bby_list)
 		return (NULL);
