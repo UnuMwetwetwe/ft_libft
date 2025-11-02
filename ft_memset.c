@@ -6,7 +6,7 @@
 /*   By: aldecour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:20:05 by aldecour          #+#    #+#             */
-/*   Updated: 2025/10/15 18:17:51 by aldecour         ###   ########.fr       */
+/*   Updated: 2025/11/02 17:52:51 by aldecour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	while (i < n)
 	{
 		((char *)s)[i] = c;
-		i++;
+		++i;
 	}
 	return (s);
 }
